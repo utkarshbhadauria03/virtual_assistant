@@ -14,13 +14,13 @@ function wishMe(){
     let day = new Date()
     let hours= day.getHours()
     if(hours>=12 && hours<12){
-        speak("Good Morning Arjun")
+        speak("Good Morning ")
     }
     else if(hours>=12 && hours<16){
-        speak("Good Afternoon Arjun")
+        speak("Good Afternoon ")
     }
     else{
-        speak("Good Evening Arjun")
+        speak("Good Evening ")
     }
 }
 window.addEventListener('load',()=>{
@@ -45,10 +45,13 @@ window.addEventListener('load',()=>{
         btn.style.display="flex"
         voice.style.display="block"
         if(message.includes("hello") || message.includes("hey")) {
-            speak("hello arjun, how can i help you")
+            speak("hello , how can i help you")
         }
+          else if(message.includes("hi")) {
+            speak("hello , how can i help you")
+        }   
         else if(message.includes("who are you")){
-            speak("I am ROBOT Being an Virtual Assistant, Created By Arjun Sir")
+            speak("I am ROBOT Being an Virtual Assistant")
         }
        else if(message.includes("how are you")){
     speak("I am Good,Tell me about you")
@@ -74,7 +77,7 @@ window.addEventListener('load',()=>{
     }
     else if(message.includes("open clock")){
     speak("Opening Clock")
-    window.open("lock://")   
+    window.open("https://www.timeanddate.com/worldclock/india/new-delhi","_blank")   
     }
     else {
         speak(`This What i have find about ${message}`)
